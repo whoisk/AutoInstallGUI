@@ -1,7 +1,20 @@
 #-*- coding:utf-8 -*-
 import os,time
+###########################
+#     code edit by:whoisk
+#   email:
+#   2077279363@qq.com
+#   seclaen@gmail.com
+#   date:
+#         2017,11,07
+###########################
+
+
 def Logo():
-    print "this is logo"
+    Clear()
+    print "*"*20
+    print 'Welcome Auto Install the linux gui'
+    print '*'*20
 
 def Massages():
 	print """
@@ -117,7 +130,7 @@ def Options2():
     /9)Cinnamon
     /10)i3wm
     /11)mate
-    /99)[EXIT SRCIPT]
+    /99)[Back]
     ***********************************************
     """
     tmp=GetEnter()
@@ -141,18 +154,20 @@ def Options2():
     if tmp< 12:
         x=tmp-1
         Choise(x,y)
+    elif tmp== 99:
+        Options1()
     else:
         Massages()
         Options2()
 
 
 def Options1():
-    Clear()
     print """
     ***********************************************
     /1)SET APT ROLLING
     /2)SET SYS GUI
     /3)SET CONFIG  <GUI>
+    /99)Exit
     ***********************************************
     """
     tmp=GetEnter()
@@ -162,6 +177,9 @@ def Options1():
         Options2()
     elif tmp == 3:
         os.system("update-alternatives --config x-session-manager ")
+        Options1()
+    elif tmp == 99:
+        exit()
     else:
         Massages()
         Options1()
