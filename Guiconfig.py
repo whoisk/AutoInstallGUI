@@ -34,7 +34,50 @@ def InOrUn():
     """
 
 def Choise(x,y):
-    PackageList=[["apt-get install gnome-core kali-defaults kali-root-login desktop-base","apt-get remove gnome-core"],["apt-get install kali-defaults kali-root-login desktop-base kde-plasma-desktop","apt-get remove kde-plasma-desktop"],["apt-get install kali-defaults kali-root-login desktop-base kde-plasma-netbook","apt-get remove  kde-plasma-netbook"],["apt-get install kali-defaults kali-root-login desktop-base kde-standard","apt-get remove kde-standard"],["apt-get install kali-defaults kali-root-login desktop-base kde-full","apt-get remove  kde-full"],["echo NULL","echo NULL"],["apt-get install kali-defaults kali-root-login desktop-base xfce4 xfce4-places-plugin xfce4-goodies","apt-get remove xfce4 xfce4-places-plugin xfce4-goodies"],["apt-get install lxde-core lxde kali-defaults kali-root-login desktop-base","apt-get remove lxde-core"],["apt-get install kali-defaults kali-root-login desktop-base cinnamon","apt-get remove cinnamon"],["apt-get install xorg dmenu conky i3","apt-get remove xorg dmenu conky i3"],["apt-get install kali-defaults kali-root-login desktop-base mate-core mate-desktop-environment mate-desktop-environment-extra","apt-get remove  mate-core mate-desktop-environment mate-desktop-environment-extra"]]
+    PackageList=[
+            [
+              "apt-get install gnome-core kali-defaults kali-root-login desktop-base",
+              "apt-get remove gnome-core"
+            ],
+            [
+              "apt-get install kali-defaults kali-root-login desktop-base kde-plasma-desktop",
+              "apt-get remove kde-plasma-desktop"
+            ],
+            [
+              "apt-get install kali-defaults kali-root-login desktop-base kde-plasma-netbook",
+              "apt-get remove  kde-plasma-netbook"
+            ],
+            [ "apt-get install kali-defaults kali-root-login desktop-base kde-standard",
+              "apt-get remove kde-standard"
+            ],
+            [
+              "apt-get install kali-defaults kali-root-login desktop-base kde-full",
+              "apt-get remove  kde-full"
+            ],
+            [
+              "echo NULL",
+              "echo NULL"
+            ],
+            [
+             "apt-get install kali-defaults kali-root-login desktop-base xfce4 xfce4-places-plugin xfce4-goodies",
+             "apt-get remove xfce4 xfce4-places-plugin xfce4-goodies"
+            ],
+            [
+             "apt-get install lxde-core lxde kali-defaults kali-root-login desktop-base",
+             "apt-get remove lxde-core"
+            ],
+            [
+             "apt-get install kali-defaults kali-root-login desktop-base cinnamon",
+             "apt-get remove cinnamon"],
+            [
+             "apt-get install xorg dmenu conky i3",
+             "apt-get remove xorg dmenu conky i3"
+            ],
+            [
+             "apt-get install kali-defaults kali-root-login desktop-base mate-core mate-desktop-environment mate-desktop-environment-extra",
+             "apt-get remove  mate-core mate-desktop-environment mate-desktop-environment-extra"
+            ]
+                   ]
     command=PackageList[x][y]
     print command 
     os.system(command)
